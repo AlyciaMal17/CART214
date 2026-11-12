@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THE STYLE DECK — Fashion Prompt Game</title>
+  <meta name="description" content="A playful fashion prompt card game. Mix seasons, clothing, finishing touches, colour and aesthetics to create your next look.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+</head>
+<body>
+  <div id="p5-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#" data-go="0">THE <i>STYLE</i> DECK<span>®</span></a>
+    <div class="top-right"><span class="edition">ISSUE Nº 01 / YOUR STYLE, YOUR RULES</span><button class="menu-dot" aria-label="Back to welcome" data-go="0">✳</button></div>
+  </header>
+
+  <main>
+    <!-- PAGE 1: WELCOME -->
+    <section class="page active" id="page-0">
+      <div class="welcome-grid">
+        <div class="welcome-copy">
+          <p class="eyebrow"><span class="live-dot"></span> THE DIGITAL STYLING GAME</p>
+          <h1>MAKE A<br><em>LOOK.</em><br>BREAK THE<br>RULES<span class="pink-dot">.</span></h1>
+          <p class="intro">A little chaos. A lot of style. Pick your prompts, mix unexpected pieces and turn a handful of cards into a look that's completely yours.</p>
+          <button class="primary-btn" data-go="1">ENTER THE DECK <span>↗</span></button>
+          <p class="micro-note">NO WRONG ANSWERS. JUST GOOD OUTFITS.</p>
+        </div>
+        <div class="hero-art">
+          <div class="sticker sticker-top">STYLE<br>IS PLAY.</div>
+          <div class="hero-card card-back">
+            <div class="card-index">SD—001</div>
+            <div class="hero-star">✳</div>
+            <div class="hero-card-title">YOUR<br><i>STYLE</i><br>STARTS<br>HERE.</div>
+            <div class="hero-card-foot"><span>THE STYLE DECK</span><span>01 / 05</span></div>
+          </div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="sticker sticker-bottom">NOT THAT<br>DEEP. JUST<br>FASHION.</div>
+          <div class="tiny-spark spark-a">✳</div><div class="tiny-spark spark-b">✦</div>
+        </div>
+      </div>
+      <div class="bottom-line"><span>01 — WELCOME</span><span>SCROLL LESS. CREATE MORE.</span><span>EST. YOUR IMAGINATION</span></div>
+    </section>
+
+    <!-- PAGE 2: RULES -->
+    <section class="page" id="page-1">
+      <div class="page-heading">
+        <p class="eyebrow">THE PLAYBOOK / 01</p>
+        <h2>THE RULES<br><em>ARE SIMPLE.</em></h2>
+        <p class="heading-note">There are no fashion police here. Just prompts, possibilities and a little push outside your comfort zone.</p>
+      </div>
+      <div class="rules-layout">
+        <div class="rules-big-number">01<span>—</span>05</div>
+        <div class="rules-list">
+          <article class="rule"><span class="rule-no">01</span><div><h3>Choose your challenge.</h3><p>Pick how many sections you want to play with: 2, 3, 4 or all 5.</p></div><b>↗</b></article>
+          <article class="rule"><span class="rule-no">02</span><div><h3>Draw your cards.</h3><p>Each selected section gives you one random card. Every draw is a new combination.</p></div><b>↗</b></article>
+          <article class="rule"><span class="rule-no">03</span><div><h3>Make it make sense.</h3><p>Combine the prompts into an outfit idea. Interpret them literally or take creative liberties.</p></div><b>↗</b></article>
+          <article class="rule"><span class="rule-no">04</span><div><h3>Break the rules (a little).</h3><p>A dress can replace a top and bottom. A colour can influence the whole look. Make it yours.</p></div><b>↗</b></article>
+          <article class="rule"><span class="rule-no">05</span><div><h3>Save the look in your head.</h3><p>Sketch it, build a moodboard, style it in real life or just keep the idea for later.</p></div><b>↗</b></article>
+        </div>
+      </div>
+      <div class="page-actions"><button class="text-btn" data-go="0">← BACK</button><button class="primary-btn" data-go="2">MEET THE CATEGORIES <span>↗</span></button></div>
+    </section>
+
+    <!-- PAGE 3: CATEGORIES -->
+    <section class="page" id="page-2">
+      <div class="page-heading compact-heading">
+        <p class="eyebrow">THE DECK / 02</p>
+        <h2>FIVE WAYS TO<br><em>FIND YOUR LOOK.</em></h2>
+        <p class="heading-note">Each section brings a different ingredient. Mix a few or use the whole recipe.</p>
+      </div>
+      <div class="category-grid">
+        <article class="category-tile season-tile"><span class="tile-no">01 / MOOD</span><div class="tile-illustration season-ill">✳</div><h3>THE<br>SEASONS</h3><p>Spring · Summer · Fall · Winter</p><span class="tile-arrow">↗</span></article>
+        <article class="category-tile clothing-tile"><span class="tile-no">02 / THE FIT</span><div class="tile-illustration clothing-ill">✦</div><h3>THE<br>CLOTHING</h3><p>Tops · Bottoms · Dresses · Bodysuits</p><span class="tile-arrow">↗</span></article>
+        <article class="category-tile extras-tile"><span class="tile-no">03 / THE FINISH</span><div class="tile-illustration extras-ill">✧</div><h3>THE<br>EXTRAS</h3><p>Shoes · Bags · Jewellery · Accessories</p><span class="tile-arrow">↗</span></article>
+        <article class="category-tile colour-tile"><span class="tile-no">04 / THE PALETTE</span><div class="colour-orbs"><i></i><i></i><i></i><i></i></div><h3>THE<br>COLOUR</h3><p>Unexpected shades and palettes</p><span class="tile-arrow">↗</span></article>
+        <article class="category-tile aesthetic-tile"><span class="tile-no">05 / THE ENERGY</span><div class="tile-illustration aesthetic-ill">♡</div><h3>THE<br>AESTHETIC</h3><p>Y2K · Coquette · Vintage · Grunge · More</p><span class="tile-arrow">↗</span></article>
+      </div>
+      <div class="page-actions"><button class="text-btn" data-go="1">← BACK</button><button class="primary-btn" data-go="3">LET'S PLAY <span>↗</span></button></div>
+    </section>
+
+    <!-- PAGE 4: GAME SETUP -->
+    <section class="page" id="page-3">
+      <div class="game-intro">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR TURN / 03</p>
+        <h2>HOW MANY<br><em>CARDS?</em></h2>
+        <p>Choose how many sections you want in your challenge. More cards = more plot twists.</p>
+      </div>
+      <div class="difficulty-grid" role="group" aria-label="Choose number of cards">
+        <button class="difficulty selected" data-count="2"><span class="difficulty-number">02</span><span class="difficulty-name">QUICK SPARK</span><span class="difficulty-desc">A little inspiration.</span><span class="difficulty-check">✓</span></button>
+        <button class="difficulty" data-count="3"><span class="difficulty-number">03</span><span class="difficulty-name">THE MIX</span><span class="difficulty-desc">A little more to work with.</span><span class="difficulty-check">✓</span></button>
+        <button class="difficulty" data-count="4"><span class="difficulty-number">04</span><span class="difficulty-name">FULL LOOK</span><span class="difficulty-desc">Build the whole vibe.</span><span class="difficulty-check">✓</span></button>
+        <button class="difficulty" data-count="5"><span class="difficulty-number">05</span><span class="difficulty-name">NO LIMITS</span><span class="difficulty-desc">Use every section.</span><span class="difficulty-check">✓</span></button>
+      </div>
+      <div class="setup-bottom">
+        <p><b>THE DEAL:</b> One card from each chosen section. Every round is random. Every result is yours to interpret.</p>
+        <button class="primary-btn draw-btn" id="draw-btn">SHUFFLE MY DECK <span>✳</span></button>
+      </div>
+      <button class="text-btn back-setup" data-go="2">← BACK TO CATEGORIES</button>
+    </section>
+
+    <!-- GAME RESULT -->
+    <section class="page" id="page-4">
+      <div class="result-header"><div><p class="eyebrow">THE STYLE DECK / YOUR DRAW</p><h2>THE LOOK<br><em>IS YOURS.</em></h2></div><div class="draw-stamp">ROUND<br><strong id="round-number">01</strong></div></div>
+      <p class="result-subtitle" id="result-subtitle">Your cards are in. Now make something out of them.</p>
+      <div class="drawn-cards" id="drawn-cards"></div>
+      <div class="result-actions">
+        <button class="text-btn" data-go="3">← CHANGE CHALLENGE</button>
+        <button class="outline-btn" id="redraw-btn">RESHUFFLE ↻</button>
+        <button class="primary-btn" id="new-round-btn">ANOTHER ROUND <span>↗</span></button>
+      </div>
+      <div class="creative-nudge"><span>✳</span><p><b>YOUR CREATIVE BRIEF</b><br>Turn these prompts into one outfit. Sketch it, style it, collage it. There is no single right answer.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>THE STYLE DECK®</span><span>MADE FOR THE LOVE OF MAKING A LOOK.</span><span>© 2026</span></footer>
+  <script src="sketch.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
